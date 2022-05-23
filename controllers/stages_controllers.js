@@ -1,9 +1,10 @@
 const stages = require("express").Router();
 const db = require("../models");
-const { Event } = db;
+const { Stage } = db;
 const { Op } = require("sequelize");
 
 // FIND ALL EVENTS
+
 stages.get("/", async (req, res) => {
   try {
     const foundStages = await Stage.findAll({
